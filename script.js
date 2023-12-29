@@ -146,9 +146,10 @@ document.addEventListener('DOMContentLoaded', function () {
         stopScanning();
     });
 
-    videoArea.addEventListener('contextmenu', function(event) {
+    window.addEventListener('contextmenu', function(event) {
         event.preventDefault();
-        stopScanning();
+        event.stopPropagation();
+        return false;
     });
 
     itemsButton.addEventListener('click', function() {
