@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Barcode Scanner</title>
+</head>
+<body>
+    <div id="container">
+        <div id="video-container">
+            <div id="video-feed"></div>
+            <div id="video-overlay"></div>
+            <div id="video-area"></div>
+        </div>
+        <div id="info">
+            <div id="button-container">
+                <button class="button" id="items-button">
+                    <img src="icons/items.svg" alt="Items Icon"/>
+                </button>
+                <button class="button" id="name-button">
+                    <img src="icons/name.svg" alt="Name Icon"/>
+                </button>
+            </div>
+        </div>
+        <div id="list-container">
+            <div id="list-background"></div>
+            <div id="list-header">
+                <button class="button" id="list-close-button">
+                    <img src="icons/close.svg" alt="Close Icon"/>
+                </button>
+            </div>
+            <div id="list">
+                <div id="list-empty" class="list-item">
+                    <h3>Nothing to show</h3>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/quagga/0.12.1/quagga.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
