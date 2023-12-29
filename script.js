@@ -55,11 +55,6 @@ function onScanCode(code) {
 
     scanQueue = [];
     addListItem(code);
-
-    window.navigator.vibrate(1000);
-
-    const audio = new Audio("sounds/beep.mp3");
-    audio.play();
 }
 
 function startScanning() {
@@ -141,6 +136,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
     videoArea.addEventListener('pointerdown', function() {
         startScanning();
+        window.navigator.vibrate(1000);
+        const audio = new Audio("sounds/beep.mp3");
+        audio.play();
+
     });
 
     videoArea.addEventListener('pointerup', function() {
